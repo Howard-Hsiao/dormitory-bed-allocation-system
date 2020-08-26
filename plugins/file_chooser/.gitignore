@@ -1,0 +1,11 @@
+.dart_tool
+.packages
+.flutter-plugins
+.flutter-plugins-dependencies
+.DS_Store
+*/.DS_Store
+**/.DS_Store
+*/__pycache__/
+**/__pycache__/
+***/__pycache__/
+pubspec.lock

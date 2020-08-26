@@ -1,0 +1,93 @@
+name: testbed
+description: A test project for flutter-desktop-embedding.
+
+environment:
+  sdk: '>=2.0.0 <3.0.0'
+  # The testbed interacts with build scripts on the Flutter side that are not
+  # yet stable, so it requires a very recent version of Flutter.
+  # This version will increase regularly as the build scripts change.
+  flutter: '>=1.10.2-pre.54'
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  cupertino_icons: ^0.1.0
+
+  excel: 1.1.4
+  http: ^0.12.1
+  dio: ^3.0.9
+
+  # FDE plugins.
+  # Note: In an actual project, these would be included via 'git:' reference,
+  # rather than 'path:', as described in the plugins README.
+  color_panel:
+    path: ../plugins/color_panel
+  # file_chooser:
+  #   path: ../plugins/file_chooser
+  file_picker: ^1.10.0
+  menubar:
+    path: ../plugins/menubar
+  window_size:
+    path: ../plugins/window_size
+  # Plugins from flutter/plugins, with local desktop implementations.
+  path_provider: ^1.6.5
+  path_provider_fde:
+    path: ../plugins/flutter_plugins/path_provider_fde
+  shared_preferences: ^0.5.6
+  url_launcher: ^5.4.0
+  url_launcher_fde:
+    path: ../plugins/flutter_plugins/url_launcher_fde
+  
+  json_annotation: ^3.0.0
+  flutter_material_pickers: ^1.5.2
+  # file_picker_cross: ^2.0.0
+  file_utils: ^0.1.4
+  flutter_file_dialog: ^0.0.5
+
+  file_chooser:
+    git:
+      url: git://github.com/google/flutter-desktop-embedding.git
+      path: plugins/file_chooser
+      ref: bae67ae551328695f76cd9923a7c9ea27075eba1
+  sprintf: ^4.0.0
+  font_awesome_flutter: ^8.8.1
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  build_runner: ^1.0.0
+  json_serializable: ^3.2.0
+
+flutter:
+  uses-material-design: true
+
+  fonts:
+    - family: Roboto
+      fonts:
+        - asset: fonts/Roboto/Roboto-Thin.ttf
+          weight: 100
+        - asset: fonts/Roboto/Roboto-Light.ttf
+          weight: 300
+        - asset: fonts/Roboto/Roboto-Regular.ttf
+          weight: 400
+        - asset: fonts/Roboto/Roboto-Medium.ttf
+          weight: 500
+        - asset: fonts/Roboto/Roboto-Bold.ttf
+          weight: 700
+        - asset: fonts/Roboto/Roboto-Black.ttf
+          weight: 900
+    - family: Noto_Sans_TC
+      fonts:
+        - asset: fonts/Noto_Sans_TC/NotoSansTC-Thin.otf
+          weight: 100
+        - asset: fonts/Noto_Sans_TC/NotoSansTC-Light.otf
+          weight: 300
+        - asset: fonts/Noto_Sans_TC/NotoSansTC-Regular.otf
+          weight: 400
+        - asset: fonts/Noto_Sans_TC/NotoSansTC-Medium.otf
+          weight: 500
+        - asset: fonts/Noto_Sans_TC/NotoSansTC-Bold.otf
+          weight: 700
+        - asset: fonts/Noto_Sans_TC/NotoSansTC-Black.otf
+          weight: 900
